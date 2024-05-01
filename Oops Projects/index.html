@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+    speak() {
+        console.log(`${this.name} makes a noise.`);
+    }
+}
+
+class Dog extends Animal {
+    speak() {
+        console.log(`${this.name} barks.`);
+    }
+}
+
+let dog = new Dog('Buddy');
+dog.speak();
+
+
+</script>
+
+
+
+<!-- Explaintion
+
+    
+This JavaScript code defines two classes: `Animal` and `Dog`.
+ The `Animal` class has a constructor that takes a `name` parameter and a method `speak()` that logs a generic noise message.
+  The `Dog` class extends `Animal` and overrides the `speak()` method with a specific bark message.
+   Finally, an instance of `Dog` named `Buddy` is created, and its `speak()` method is called, resulting in "Buddy barks."
+    being logged to the console. -->
