@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1></h1>
+    <button onClick="start()">Start Timer</button>
+    <button onClick="stop()">Stop Timer</button>
+<br><br><br>
+    <img id="carousel" src="" alt="">
+  </body>
+</html>
+
+<script>
+  let i = 0;
+  let id
+  function start() {
+     id = setInterval(function () {
+      i++;
+      console.log(i);
+      document.querySelector("h1").innerText = i;
+    }, 1000);
+  }
+
+  function stop() {
+    clearInterval(id);
+    
+  }
+
+
+  let currentIndex = 0;
+let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD45y8kPkrNY-_HvWBuswKS4DR0z8f-Ja1wQ&s",
+ "https://pbs.twimg.com/media/Fgs1fqkXoAIcCaU.jpg", 
+ "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTggkafG9hHtUhy2kkivcX1Ib7ueKyLtOcfSq2iLoOnSg&s",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdbjKrlP48sMgT4TUZvzqLikImY_K-ACH9fA&s"];
+
+setInterval(function() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById("carousel").src = images[currentIndex];
+}, 3000);
+
+ 
+
+</script>

@@ -1,0 +1,87 @@
+
+
+<!-- <script>
+
+    let time=10
+    setInterval(()=>{
+        document.querySelector("h1").innerText=time;
+       
+
+
+    if(time<=0)
+    clearInterval(id)
+    time--
+    },1000)
+    
+</script> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIGITAL CLOCK</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      #clock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #e1e34c;
+        /* direction,color1,color2...link--- */
+      }
+
+      #clock > div {
+        padding: 30px;
+        margin: 30px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        box-shadow: 5px 5px 23px #579d02, -5px -5px 23px #013c48;
+      }
+
+      span {
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+   
+    <div id="clock">
+      <div id="hours">12</div>
+      <span>:</span>
+      <div id="minutes">00</div>
+      <span>:</span>
+      <div id="seconds">00 </div>
+      <div id="half">PM</div>
+    </div>
+    
+  </body>
+  <script>
+    setInterval(()=>{ 
+      const date =new Date()
+    if(date.getHours()>=12)
+        {
+            document.getElementById("half").innerText="PM"
+        }
+        else {
+            document.getElementById("half").innerText="AM"
+        }
+
+        document.getElementById("hours").innerText=date.getHours()
+        document.getElementById("minutes").innerText=date.getMinutes()
+        document.getElementById("seconds").innerText=date.getSeconds()
+    },1000)
+
+  </script>
+  
+</html>
+
